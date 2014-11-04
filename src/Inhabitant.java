@@ -1,4 +1,4 @@
-package courriers;
+
 
 public class Inhabitant {
 	public void sendletter(letter<?>letter){
