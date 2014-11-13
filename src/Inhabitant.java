@@ -15,7 +15,7 @@ public class Inhabitant {
 	
 	public void sendletter(Letter<?> l){
 		this.bankaccount.debit(l.getCost());
-		getCity().sendletter(l);
+		getCity().sendLetter(l);
 	}
 
 	public void receiveLetter(Letter<?> letter){

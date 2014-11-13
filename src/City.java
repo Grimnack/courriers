@@ -13,14 +13,14 @@ public class City {
 	}
 
 	public void distributeLetters(){
-		List<Letter<?>> bag = new ArrayList<Letter<?>>(postbox):
+		List<Letter<?>> bag = new ArrayList<Letter<?>>(postbox);
 		for(Letter<?> letter: bag){
-			letter.getReceiver().receiveletter(letter);
+			letter.getReceiver().receiveLetter(letter);
 			postbox.remove(letter);
 		}
 	}
 
 	public void sendLetter(Letter<?> letter){
-		postBox.add(letter);
+		postbox.add(letter);
 	}
 }
