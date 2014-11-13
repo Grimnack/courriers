@@ -15,7 +15,8 @@ public class SimpleLetter<T> extends Letter<T>{
 
 	@Override
 	public void doAction() {
-		// TODO Auto-generated method stub
+		sender.debit(coutFixe);
+		System.out.println("A"+this.receiver+":"+this.content);
 		
 	}
 	
