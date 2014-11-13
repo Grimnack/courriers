@@ -34,4 +34,7 @@ public class Inhabitant {
 		this.bankaccount.credit(i);
 		return ;
 	}
+	public String toString(){
+		return this.name;
+	}
 }
