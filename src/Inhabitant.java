@@ -13,12 +13,23 @@ public class Inhabitant {
 		this.bankaccount = b;
 	}
 	
-	public void sendletter(letter<?>letter){
-		account.debit(letter.getCost());
-		getCity().sendletter(letter);
+	public void sendletter(Letter<?> l){
+		this.bankaccount.debit(l.getCost());
+		getCity().sendletter(l);
 	}
 
-	public void receiveLetter(letter<?>letter){
+	public void receiveLetter(Letter<?> letter){
 		letter.doAction();
+	}
+	
+	public City getCity() {
+		return this.city;
+	}
+	
+	public void debit(int i){
+		return ;
+	}
+	public void credit(int i){
+		return ;
 	}
 }
