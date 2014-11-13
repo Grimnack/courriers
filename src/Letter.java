@@ -13,4 +13,14 @@ public abstract class Letter<T> {
 	public abstract int getCost();
 	
 	public abstract void doAction();
+	
+	public Inhabitant getReceiver(){
+		return this.receiver;
+	}
+	
+	public Content getSender(){
+		return this.content;
+	}
+	
+	
 }

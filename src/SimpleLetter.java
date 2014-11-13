@@ -1,0 +1,22 @@
+
+public class SimpleLetter<T> extends Letter<T>{
+	protected final int coutFixe;
+	
+	public SimpleLetter(Inhabitant s, Inhabitant r){
+		super(s, r);
+		/* on choisit arbitrairement le cout d'une lettre simple a 1 */
+		this.coutFixe = 1;
+		
+	}
+	@Override
+	public int getCost() {
+		return this.coutFixe;
+	}
+
+	@Override
+	public void doAction() {
+		// TODO Auto-generated method stub
+		
+	}
+	
+}
