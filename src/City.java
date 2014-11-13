@@ -3,6 +3,14 @@ import java.util.List;
 
 
 public class City {
+	
+	protected String name;
+	protected List<Letter<?>> postbox;
+	
+	public City(String name, List<Letter<?>> postbox){
+		this.name = name;
+		this.postbox=postbox;
+	}
 
 	public void distributeLetters(){
 		List<Letter<?>> bag = new ArrayList<Letter<?>>(postbox):
@@ -12,7 +20,7 @@ public class City {
 		}
 	}
 
-	public void sendLetter(Letter<?>letter){
+	public void sendLetter(Letter<?> letter){
 		postBox.add(letter);
 	}
 }
