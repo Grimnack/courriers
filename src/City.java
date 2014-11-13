@@ -6,12 +6,19 @@ public class City {
 	
 	protected String name;
 	protected List<Letter<?>> postbox;
-	
+	/**
+	 * Constructor of the class City
+	 * @param name = the name of the city
+	 * @param postbox = the postbox of the city
+	 */
 	public City(String name, List<Letter<?>> postbox){
 		this.name = name;
 		this.postbox=postbox;
 	}
 
+	/**
+	 * distribute letters that are in the postbox
+	 */
 	public void distributeLetters(){
 		List<Letter<?>> bag = new ArrayList<Letter<?>>(postbox);
 		for(Letter<?> letter: bag){
@@ -19,7 +26,9 @@ public class City {
 			postbox.remove(letter);
 		}
 	}
-
+	/**
+	 * add a letter in the postbox
+	 */
 	public void sendLetter(Letter<?> letter){
 		postbox.add(letter);
 	}
