@@ -15,7 +15,7 @@ public class SimpleLetter<T> extends Letter<T>{
 
 	@Override
 	public void doAction() {
-		sender.debit(coutFixe);
+		sender.debit(this.getCost());
 		System.out.println("A"+this.receiver+":"+this.content);
 		
 	}
