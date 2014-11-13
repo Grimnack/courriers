@@ -1,15 +1,18 @@
+import java.util.ArrayList;
+import java.util.List;
+
 
 public class City {
 
 	public void distributeLetters(){
-		list<letter<?>> bag = new Arraylist<letter<?>>(postbox):
-		for(letter<?> letter: bag){
+		List<Letter<?>> bag = new ArrayList<Letter<?>>(postbox):
+		for(Letter<?> letter: bag){
 			letter.getReceiver().receiveletter(letter);
 			postbox.remove(letter);
 		}
 	}
 
-	public void sendLetter(letter<?>letter){
+	public void sendLetter(Letter<?>letter){
 		postBox.add(letter);
 	}
 }
