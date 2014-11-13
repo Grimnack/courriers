@@ -27,9 +27,11 @@ public class Inhabitant {
 	}
 	
 	public void debit(int i){
+		this.bankaccount.debit(i);
 		return ;
 	}
 	public void credit(int i){
+		this.bankaccount.credit(i);
 		return ;
 	}
 }
