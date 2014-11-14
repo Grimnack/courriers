@@ -3,6 +3,12 @@ public class PromissoryNote<T> extends Letter<T>{
 	protected int amount;
 	protected int cout;
 	
+	/**
+	 * Constructor of the PromissoryNote Class
+	 * @param s Inhabitant sender
+	 * @param r Inhabitant receiver
+	 * @param a the amount
+	 */
 	public PromissoryNote(Inhabitant s, Inhabitant r, int a){
 		super(s,r);
 		this.amount = a;
