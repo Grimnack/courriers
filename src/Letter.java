@@ -1,5 +1,5 @@
 
-public abstract class Letter<T extends Content> {
+public abstract class Letter<T> {
 	protected Inhabitant sender;
 	protected Inhabitant receiver;
 	protected T content;

@@ -56,6 +56,18 @@ public class Main {
 	}
 		
 	public static void main(String[] args){
+		Main main = new Main() ;
+		System.out.println("Creating the City Lille");
+		System.out.println("Creating 100 inhabitants");
+		for(int i = 1 ; i<=5 ; i++){
+			System.out.println("Day "+i);
+			main.getCity().distributeLetters();
+			main.getCity().sendLetter(main.createRandomLetter());
+			main.getCity().sendLetter(main.createRandomLetter());
+			main.getCity().sendLetter(main.createRandomLetter());
+			main.getCity().sendLetter(main.createRandomLetter());
+			main.getCity().collectLetters();
+		}
 		
 	}
 		

@@ -1,9 +1,22 @@
 
-public class UrgentLetter extends LetterDecorator {
+public class UrgentLetter<T extends Letter<T>> extends LetterDecorator<T> {
 	
+	private final int ratio = 2;
 	
-	public void doAction(){
-		super.doAction();
-		this.letter.getSender().debit(this.letter.getCost());
+	public UrgentLetter(Inhabitant s, Inhabitant r, T t) {
+		super(s, r, t);
 	}
+
+	@Override
+	public int getCost() {
+		return this.content.getCost()*this.ratio;
+	}
+
+	@Override
+	public void doAction() {
+		this.content.doAction();
+		
+	}
+
+
 }

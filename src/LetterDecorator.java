@@ -1,11 +1,8 @@
 
-public class LetterDecorator{
+public abstract class LetterDecorator<T extends Letter<?>> extends Letter<T>{
 	
-	protected Letter<?> letter ;
-	/**
-	 * Method who effect the doAction method of the letter class
-	 */
-	public void doAction(){
-		this.letter.doAction();
+	public LetterDecorator(Inhabitant s, Inhabitant r, T t) {
+		super(s, r, t);
 	}
+
 }
