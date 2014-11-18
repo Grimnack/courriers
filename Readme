@@ -1,1 +1,13 @@
 TP de CARON ET DURAND
+
+L'execution de notre .jar se fait par la commande
+java -jar Courriers.jar
+
+On a crée une trace d'exécution qui effectue l'envoie et la reception de courrier sur 5 jours.
+Les tests ont été fait.
+
+Détails des fichiers:
+/src/*.java comprend les classes et les fichiers de tests
+/Courriers.jar comprend l'exécutable
+/Courriers-UML.pdf comprend le diagramme UML
+
