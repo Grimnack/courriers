@@ -1,5 +1,5 @@
 
-public class UrgentLetter<T extends Letter<T>> extends LetterDecorator<T> {
+public class UrgentLetter<T extends Letter<?>> extends LetterDecorator<T> {
 	
 	private final int ratio = 2;
 	

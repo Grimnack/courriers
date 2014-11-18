@@ -45,13 +45,23 @@ public class Main {
 	 */
 	public Letter<?> createRandomLetter() {
 		Letter<?> letter;
-		switch (r.nextInt(2)) {
+		Inhabitant sender = this.inhabitants[r.nextInt(100)] ;
+		Inhabitant receiver = this.inhabitants[r.nextInt(100)] ;
+		Letter<TextContent> lettre = new SimpleLetter<TextContent>(sender, receiver, new TextContent("Bonjour tu vas bien ?")) ;
+		switch (r.nextInt(4)) {
 		case 0:
-				letter = new PromissoryNote<MoneyContent>(this.inhabitants[r.nextInt(100)], this.inhabitants[r.nextInt(100)], new MoneyContent(10)) ;
+				letter = new PromissoryNote<MoneyContent>(sender, receiver, new MoneyContent(10)) ;
 				break;
-		default :
-				letter = new SimpleLetter<TextContent>(this.inhabitants[r.nextInt(100)], this.inhabitants[r.nextInt(100)], new TextContent("Bonjour tu vas bien ?")) ;
-		}
+		case 1:
+				letter = new SimpleLetter<TextContent>(sender, receiver, new TextContent("Bonjour tu vas bien ?")) ;
+				break ;
+		case 2:
+				letter = new UrgentLetter<Letter<TextContent>>(sender, receiver, lettre);
+				break ;
+		default:
+				letter = new RegisteredLetter<Letter<TextContent>>(sender, receiver, lettre);
+				break ;
+		}	
 		return letter;
 	}
 		
