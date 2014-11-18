@@ -15,6 +15,7 @@ public class UrgentLetter<T extends Letter<?>> extends LetterDecorator<T> {
 	@Override
 	public void doAction() {
 		this.content.doAction();
+		System.out.println("As an Urgent Letter");
 		
 	}
 

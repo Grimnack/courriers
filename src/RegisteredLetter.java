@@ -15,6 +15,7 @@ public class RegisteredLetter<T extends Letter<?>> extends LetterDecorator<T> {
 	@Override
 	public void doAction() {
 		this.content.doAction();
+		System.out.println("As a Registered Letter");
 	}
 	
 }

@@ -22,15 +22,17 @@ public class Inhabitant {
 	 * send a letter
 	 * @param l the letter to send
 	 */
-	public void sendletter(Letter<Content> l){
+	public void sendletter(Letter<?> l){
 		this.bankaccount.debit(l.getCost());
 		getCity().sendLetter(l);
+		System.out.println(this.name+" send a letter to "+l.getReceiver());
 	}
 	/**
 	 * receive a letter
 	 * @param letter the letter received
 	 */
 	public void receiveLetter(Letter<?> letter){
+		System.out.println(this.name+" receives a letter from "+letter.getSender());
 		letter.doAction();
 	}
 	/**

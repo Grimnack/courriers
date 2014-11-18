@@ -23,7 +23,7 @@ public class PromissoryNote<T extends MoneyContent> extends Letter<T>{
 	public void doAction() {
 		sender.debit(amount);
 		receiver.credit(amount);
-		System.out.println(this.sender + "à envoyé"+ this.amount+"à"+this.receiver);
+		//System.out.println(this.sender + " send "+ this.amount+"€ to "+this.receiver);
 		sender.debit(cout);
 	}
 

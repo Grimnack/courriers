@@ -1,5 +1,3 @@
-import java.util.LinkedList;
-import java.util.List;
 import java.util.Random;
 
 
@@ -25,6 +23,10 @@ public class Main {
 		
 		
 	}
+	public Inhabitant[] getInhabitant(){
+		return this.inhabitants;
+	}
+	
 	/**
 	 * @return the random of the main class 
 	 */
@@ -72,10 +74,12 @@ public class Main {
 		for(int i = 1 ; i<=5 ; i++){
 			System.out.println("Day "+i);
 			main.getCity().distributeLetters();
-			main.getCity().sendLetter(main.createRandomLetter());
-			main.getCity().sendLetter(main.createRandomLetter());
-			main.getCity().sendLetter(main.createRandomLetter());
-			main.getCity().sendLetter(main.createRandomLetter());
+			main.getInhabitant()[main.getR().nextInt(100)].sendletter(main.createRandomLetter());
+			main.getInhabitant()[main.getR().nextInt(100)].sendletter(main.createRandomLetter());
+			main.getInhabitant()[main.getR().nextInt(100)].sendletter(main.createRandomLetter());
+			main.getInhabitant()[main.getR().nextInt(100)].sendletter(main.createRandomLetter());
+			main.getInhabitant()[main.getR().nextInt(100)].sendletter(main.createRandomLetter());
+			//main.getCity().sendLetter(main.createRandomLetter());
 			main.getCity().collectLetters();
 		}
 		

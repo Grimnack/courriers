@@ -15,7 +15,7 @@ public class CityTest {
 
 	@Test
 	public void testDistributeLetters() {
-		fail("Not yet implemented");
+		c.get;
 	}
 
 	@Test
