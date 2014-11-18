@@ -15,17 +15,33 @@ public class CityTest {
 
 	@Test
 	public void testDistributeLetters() {
-		c.get;
+		c.distributeLetters();
+		assertEquals(c.getPost(), new City("test").getPost());
 	}
 
 	@Test
 	public void testSendLetter() {
-		fail("Not yet implemented");
+		BankAccount b = new BankAccount(10);
+		Inhabitant h = new Inhabitant(c,"InhabitantTest",b);
+		Letter<?> l = new SimpleLetter<TextContent>(h,h, new TextContent("test"));
+		c.sendLetter(l);
+		for(Letter<?> letter: c.mailbox)
+			assertEquals(letter,l);
 	}
 
 	@Test
 	public void testCollectLetters() {
-		fail("Not yet implemented");
+		c.collectLetters();
+		assertEquals(c.getMailBox(), new City("test").getMailBox());
 	}
-
+	
+	@Test
+	public void testGetPost() {
+		assertEquals(c.getPost(), c.post);
+	}
+	
+	@Test
+	public void testGetMailBox() {
+		assertEquals(c.getMailBox(), c.mailbox);
+	}
 }

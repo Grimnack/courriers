@@ -1,7 +1,9 @@
+import java.util.Arrays;
 import java.util.Random;
 
 
 public class Main {
+
 	/* Attributs */
 	protected City city;
 	protected Inhabitant[] inhabitants;
@@ -84,17 +86,25 @@ public class Main {
 		}
 		
 	}
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
 	
+		
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Main other = (Main) obj;
+		if (city == null) {
+			if (other.city != null)
+				return false;
+		} else if (!city.equals(other.city))
+			return false;
+		if (!Arrays.equals(inhabitants, other.inhabitants))
+			return false;
+		return true;
+	}	
 	
 }

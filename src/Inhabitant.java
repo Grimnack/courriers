@@ -67,4 +67,32 @@ public class Inhabitant {
 	public String toString(){
 		return this.name;
 	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Inhabitant other = (Inhabitant) obj;
+		if (bankaccount == null) {
+			if (other.bankaccount != null)
+				return false;
+		} else if (!bankaccount.equals(other.bankaccount))
+			return false;
+		if (city == null) {
+			if (other.city != null)
+				return false;
+		} else if (!city.equals(other.city))
+			return false;
+		if (name == null) {
+			if (other.name != null)
+				return false;
+		} else if (!name.equals(other.name))
+			return false;
+		return true;
+	}
+	
 }

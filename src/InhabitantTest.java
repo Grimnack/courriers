@@ -15,15 +15,7 @@ public class InhabitantTest {
 		assertEquals(h.bankaccount, b);
 	}
 
-	@Test
-	public void testSendletter() {
-		fail();
-	}
 
-	@Test
-	public void testReceiveLetter() {
-		fail();
-	}
 
 	@Test
 	public void testGetCity() {
@@ -33,13 +25,13 @@ public class InhabitantTest {
 	@Test
 	public void testDebit() {
 		h.debit(10);
-		assertEquals(h.bankaccount,b.balance-10);
+		assertEquals(h.bankaccount.getBalance(),0);
 	}
 
 	@Test
 	public void testCredit() {
 		h.credit(10);
-		assertEquals(h.bankaccount,b.balance+10);
+		assertEquals(h.bankaccount.getBalance(),20);
 	}
 
 	@Test

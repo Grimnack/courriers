@@ -1,5 +1,6 @@
 
 public class BankAccount {
+
 	protected int balance;
 	/**
 	 * Constructor of the BankAccount
@@ -30,4 +31,19 @@ public class BankAccount {
 	public int getBalance() {
 		return this.balance;
 	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		BankAccount other = (BankAccount) obj;
+		if (balance != other.balance)
+			return false;
+		return true;
+	}
+	
 }
