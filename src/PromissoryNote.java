@@ -1,5 +1,5 @@
 
-public class PromissoryNote<T> extends Letter<T>{
+public class PromissoryNote<T extends MoneyContent> extends Letter<T>{
 	protected int amount;
 	protected int cout;
 	
@@ -9,10 +9,10 @@ public class PromissoryNote<T> extends Letter<T>{
 	 * @param r Inhabitant receiver
 	 * @param a the amount
 	 */
-	public PromissoryNote(Inhabitant s, Inhabitant r, int a){
-		super(s,r);
-		this.amount = a;
-		this.cout = 1 + a/100;
+	public PromissoryNote(Inhabitant s, Inhabitant r,T m){
+		super(s,r,m);
+		this.amount = m.getMoneyContent();
+		this.cout = 1 + m.getMoneyContent()/100;
 	}
 	@Override
 	public int getCost() {

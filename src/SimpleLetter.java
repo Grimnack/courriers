@@ -1,5 +1,5 @@
 
-public class SimpleLetter<T> extends Letter<T>{
+public class SimpleLetter<T extends TextContent> extends Letter<T>{
 	protected final int coutFixe;
 	
 	/**
@@ -7,8 +7,8 @@ public class SimpleLetter<T> extends Letter<T>{
 	 * @param s Inhabitant sender
 	 * @param r Inhabitant receiver
 	 */
-	public SimpleLetter(Inhabitant s, Inhabitant r){
-		super(s, r);
+	public SimpleLetter(Inhabitant s, Inhabitant r,T t){
+		super(s, r, t);
 		/* on choisit arbitrairement le cout d'une lettre simple a 1 */
 		this.coutFixe = 1;
 		
@@ -22,7 +22,6 @@ public class SimpleLetter<T> extends Letter<T>{
 	public void doAction() {
 		sender.debit(this.getCost());
 		System.out.println("A"+this.receiver+":"+this.content);
-		
 	}
 	
 }

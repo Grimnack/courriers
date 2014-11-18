@@ -1,35 +1,45 @@
-import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 
 public class City {
 	
 	protected String name;
-	protected List<Letter<?>> postbox;
+	protected List<Letter<?>> post;
+	protected List<Letter<?>> mailbox;
 	/**
 	 * Constructor of the class City
 	 * @param name = the name of the city
-	 * @param poste = the postbox of the city
 	 */
-	public City(String name, List<Letter<?>> poste){
+	public City(String name){
 		this.name = name;
-		this.postbox=poste;
+		this.post=new LinkedList<Letter<?>>();
+		this.mailbox=new LinkedList<Letter<?>>();
 	}
 
 	/**
-	 * distribute letters that are in the postbox
+	 * distribute letters that are in the post
 	 */
 	public void distributeLetters(){
-		List<Letter<?>> bag = new ArrayList<Letter<?>>(postbox);
-		for(Letter<?> letter: bag){
+		for(Letter<?> letter: this.post){
 			letter.getReceiver().receiveLetter(letter);
-			postbox.remove(letter);
+			post.remove(letter);
 		}
 	}
 	/**
-	 * add a letter in the postbox
+	 * add a letter in the mailbox
 	 */
 	public void sendLetter(Letter<?> letter){
-		postbox.add(letter);
+		mailbox.add(letter);
+	}
+	
+	/**
+	 * Throws all the letters in the mailbox to the post
+	 */
+	public void collectLetters(){
+		for(Letter<?> letter: this.mailbox){
+			this.post.add(letter);
+			mailbox.remove(letter);
+		}
 	}
 }
