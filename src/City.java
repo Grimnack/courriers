@@ -23,8 +23,8 @@ public class City {
 	public void distributeLetters(){
 		for(Letter<?> letter: this.post){
 			letter.getReceiver().receiveLetter(letter);
-			post.remove(letter);
 		}
+		post.clear();
 	}
 	/**
 	 * add a letter in the mailbox
@@ -39,7 +39,7 @@ public class City {
 	public void collectLetters(){
 		for(Letter<?> letter: this.mailbox){
 			this.post.add(letter);
-			mailbox.remove(letter);
 		}
+		mailbox.clear();
 	}
 }
