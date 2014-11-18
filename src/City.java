@@ -9,11 +9,11 @@ public class City {
 	/**
 	 * Constructor of the class City
 	 * @param name = the name of the city
-	 * @param postbox = the postbox of the city
+	 * @param poste = the postbox of the city
 	 */
-	public City(String name, List<Letter<?>> postbox){
+	public City(String name, List<Letter<?>> poste){
 		this.name = name;
-		this.postbox=postbox;
+		this.postbox=poste;
 	}
 
 	/**

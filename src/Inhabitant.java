@@ -22,7 +22,7 @@ public class Inhabitant {
 	 * send a letter
 	 * @param l the letter to send
 	 */
-	public void sendletter(Letter<?> l){
+	public void sendletter(Letter<Content> l){
 		this.bankaccount.debit(l.getCost());
 		getCity().sendLetter(l);
 	}

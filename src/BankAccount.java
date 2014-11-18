@@ -1,15 +1,13 @@
 
 public class BankAccount {
-	protected Inhabitant inhabitant ;
 	protected int balance;
 	/**
 	 * Constructor of the BankAccount
 	 * @param i = the Inhabitant
 	 * @param b = the amount to set in the BankAccount
 	 */
-	public BankAccount(Inhabitant i, int b){
-		this.inhabitant = i ;
-		this.balance = b ;
+	public BankAccount(int balance){
+		this.balance = balance ;
 	}
 /**
  * credited the BankAccount of the people
